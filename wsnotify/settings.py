@@ -28,9 +28,12 @@ DEBUG = os.getenv("DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = ['10.11.27.210',"*" ]
 
-# if not DEBUG:
-    # ALLOWED_HOSTS = ["audiotrackerbackend.onrender.com"]
+if not DEBUG:
+    ALLOWED_HOSTS = ["at-notif-backend0210.onrender.com"]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://at-notif-backend0210.onrender.com",
+]
 
 
 # Application definition
